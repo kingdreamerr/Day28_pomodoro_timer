@@ -36,3 +36,11 @@ timer_title.grid(column=1, row=0)
 start_btn = Button(text="Start", command=start_timer)
 start_btn.grid(column=0, row=2)
 mark = Label(bg=YELLOW, font=(FONT_NAME, 15), fg="#07332E")
+
+
+mark.grid(column=1, row=3)
+
+reset_btn = Button(text="Reset", borderwidth=1, command=reset)
+reset_btn.grid(column=2, row=2)
+
+window.mainloop()
