@@ -8,8 +8,8 @@
 ## Project to solidify material learned: 
 
 ### Preview:
-![convert](./.png)
-![convert2](./.png)
+![convert](./tomat.png)
+![convert2](./tomatoe.png)
 
 
 
