@@ -15,7 +15,24 @@ timer = None
 
 
 
+# ---------------------------- TIMER MECHANISM ------------------------------- #
 
+def start_timer():
+    global reps
+    reps += 1
+    work_sec = WORK_MIN * 60
+    short_break = SHORT_BREAK_MIN * 60
+    long_sec = LONG_BREAK_MIN * 60
+
+    if reps % 8 == 0:
+        timer_title.config(text="Long Break", fg=RED)
+        count_down(long_sec)
+    elif reps % 2 == 0:
+        timer_title.config(text="Break", fg=PINK)
+        count_down(short_break)
+    else:
+        count_down(work_sec)
+        timer_title.config(text="Work", fg=GREEN)
 
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
