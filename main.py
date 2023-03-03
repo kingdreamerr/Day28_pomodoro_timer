@@ -18,7 +18,25 @@ timer = None
 
 
 
+# ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 
+
+def count_down(count):
+    global reps,timer
+    time_minutes = math.floor(count / 60)
+    time_seconds = count % 60
+    if time_seconds < 10:
+        time_seconds = f"0{time_seconds}"
+    canvas.itemconfig(text_time, text=f"{time_minutes}:{time_seconds}")
+    if count > 0:
+       timer = window.after('1000', count_down, count - 1)
+    else:
+        start_timer()
+        complete=""
+        work = math.floor(reps/2)
+        for _ in range(work):
+            complete += "✅"
+            mark.config(text=complete)
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
