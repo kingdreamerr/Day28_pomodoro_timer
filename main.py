@@ -32,3 +32,7 @@ text_time = canvas.create_text(103, 130, text="00:00", fill="white",font=(FONT_N
 canvas.grid(columnspan=3, row=1)
 timer_title = Label(text="Timer", font=(FONT_NAME, 35, 'bold'), bg=YELLOW, fg=GREEN)
 timer_title.grid(column=1, row=0)
+
+start_btn = Button(text="Start", command=start_timer)
+start_btn.grid(column=0, row=2)
+mark = Label(bg=YELLOW, font=(FONT_NAME, 15), fg="#07332E")
